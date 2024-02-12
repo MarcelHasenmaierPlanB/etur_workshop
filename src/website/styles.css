@@ -1,15 +1,14 @@
-.body {
-    display: grid;
-    grid-template-areas: 10vh 85vh 5vh;
+.main {
+    display: flex;
     height: auto;
     width: 100%;
+    flex-direction: column;
 }
 
 /* ------------------ */
 
 .header {
     display: flex;
-    grid-area: 1;
     background-color: red;
     width: 100%;
     height: 10vh;
@@ -19,14 +18,13 @@
 
 .content {
     display: flex;
-    grid-area: 2;
     background-color: blue;
     width: 100%;
     height: 85vh;
+    flex-direction: column;
 }
 
 .footer {
-    grid-area: 3;
     background-color: yellow;
     width: 100%;
     height: 5vh;
@@ -35,20 +33,39 @@
 /* ------------------ */
 
 .AddCustomerButton {
- display: inline-block;
-  padding: 1;
-  border: none;
-  border-radius: 5rem/*var(--button-border-radius)*/;
-  background-color: grey/*var(--button-background-color)*/;
-  color: white/*var(--button-text-color)*/;
-  text-align: center;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: none/*var(--button-shadow)*/;
+    display: inline-block;
+    padding: 1;
+    border: none;
+    border-radius: 5rem /*var(--button-border-radius)*/;
+    background-color: lightgrey /*var(--button-background-color)*/;
+    color: darkgray /*var(--button-text-color)*/;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: none/*var(--button-shadow)*/;
 }
 
 .CustomerSearchField {
     border: grey;
     border-radius: 10%;
     padding: 10px;
+}
+
+.elements {
+    display: flex;
+    gap: 2vh;
+    background-color: green;
+}
+
+.box1 {
+    height: 10vh;
+    width: 90vw;
+    background-color: brown;
+}
+
+.box2 {
+    
+}
+
+.box3 {
 }
