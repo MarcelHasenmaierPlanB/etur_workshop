@@ -7,4 +7,6 @@ Reports wie zum Beispiel:
 - Dokumentation 
 - Bugs
 - Handbücher 
-- Feedback 
+- Feedback  
+
+und so weiter
