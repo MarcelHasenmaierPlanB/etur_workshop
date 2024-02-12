@@ -1,11 +1,21 @@
+body {
+    display: grid;
+    grid-template-areas: "header"
+                        "content"
+                        "footer";
+}
+
 #header {
+    grid-area: header;
     background-color: red;
 }
 
 #content {
+    grid: content;
     background-color: blue;
 }
 
 #footer {
+    grid: footer;
     background-color: yellow;
 }
