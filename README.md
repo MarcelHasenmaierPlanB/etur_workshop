@@ -1,2 +1,10 @@
 # etur_workshop
-project for ETUR workshop
+
+## Berscheibung  
+
+Reporting Tool zum Erstellen und Klassifizieren von Reports.  
+Reports wie zum Beispiel: 
+- Dokumentation 
+- Bugs
+- Handbücher 
+- Feedback 
