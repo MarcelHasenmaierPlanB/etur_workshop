@@ -34,7 +34,7 @@ body {
 
 .AddCustomerButton {
     border: bold;
-    border-radius: 100px;
+    border-radius: 50%;
 }
 
 .CustomerSearchField {
