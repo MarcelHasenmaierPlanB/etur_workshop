@@ -14,7 +14,7 @@ function increaseID () {
 function createCustomer(input){
     arrAllCustomer.push(input);
     arrAllCustomer[arrAllCustomer.length - 1].cID = increaseID();
-    return;
+    return arrAllCustomer[arrAllCustomer.length - 1];
 }
 
 function exportAllCustomer (){
@@ -23,22 +23,14 @@ console.log("-----Alle Kunden:-----");
  }
 
 function readCustomer (input) {
-    arrAllCustomer.forEach(element => {
-        if (input === cNr) {
-            return element;
-        }
-    });
+    return arrAllCustomer.find(element => element.cNr === input);
  }
 
 function deleteCustomer (input) {
-    arrAllCustomer.forEach(element => {
-        if (input === cNr) {
-            cName = "deletedCustomer";
-            cNr = -1;
-            cMail = "deleted@customer.com";
-            return element;
-        }
-    })
+    readCustomer(input).cName = "deletedCustomer";
+    readCustomer(input).cMail = 'deleted@customer.com';
+    readCustomer(input).cNr = -1;
+    return arrAllCustomer;
  }
 
     function validateID(cNr, arrAllCustomer) {

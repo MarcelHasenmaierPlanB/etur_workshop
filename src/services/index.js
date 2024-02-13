@@ -1,5 +1,5 @@
 
-import { deleteCustomer, exportAllCustomer } from "./customer.js";
+import { exportAllCustomer, readCustomer, deleteCustomer } from "./customer.js";
 import { createCustomer } from "./customer.js";
 import { validateID } from "./customer.js";
 
@@ -30,9 +30,3 @@ createCustomer (customer1);
 createCustomer (customer2);
 createCustomer (customer3);
 console.log(exportAllCustomer());
-randomDelete();
-
-//deleteCustomer (randomDelete());
-console.log(exportAllCustomer());
-
-console.log(validateID);
