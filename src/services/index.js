@@ -21,7 +21,7 @@ const customer3 = {
  }
 
 
- 
+
  function randomDelete(){
 const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
 console.log(randomNumber);
@@ -56,7 +56,7 @@ try {
 }
 
 const report1 = {
-    id: 1,
+    id: 1,  //wird automatisch anglegt - lösch die zeile nach dem implementieren der funktion in reports
     category: "Feeback",
     customerId: 1001,
     description: "This is a description",
