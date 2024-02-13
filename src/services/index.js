@@ -1,6 +1,7 @@
 
 import { exportAllCustomer, readCustomer, deleteCustomer } from "./customer.js";
 import { createCustomer } from "./customer.js";
+import { validateID } from "./customer.js";
 
 const customer1 = {
     cName : "ersterKunde",
@@ -18,6 +19,11 @@ const customer3 = {
     cName : "dritterKunde",
     cNr : 1003,
     cMail : "dritter@kunde.com"
+ }
+
+ function randomDelete(){
+const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
+console.log(randomNumber);
  }
 
 createCustomer (customer1);
