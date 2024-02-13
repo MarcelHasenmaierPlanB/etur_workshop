@@ -1,5 +1,5 @@
 
-import { exportAllCustomer } from "./customer.js";
+import { deleteCustomer, exportAllCustomer } from "./customer.js";
 import { createCustomer } from "./customer.js";
 
 const customer1 = {
@@ -20,7 +20,17 @@ const customer3 = {
     cMail : "dritter@kunde.com"
  }
 
+ function randomDelete(){
+const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
+console.log(randomNumber);
+ }
+
 createCustomer (customer1);
 createCustomer (customer2);
 createCustomer (customer3);
 console.log(exportAllCustomer());
+randomDelete();
+
+deleteCustomer (randomDelete());
+console.log(exportAllCustomer());
+
