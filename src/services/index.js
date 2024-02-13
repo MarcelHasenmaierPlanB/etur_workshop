@@ -32,9 +32,19 @@ const fastify = Fastify({
 })
 
 // Declare a route
-fastify.get('/', async function handler (request, reply) {
-  return { hello: 'world' }
+fastify.get('/getAllCustomers', async function handler (request, reply) {
+    const exportedCustomers = exportAllCustomer();
+    return exportedCustomers;
 })
+
+fastify.post('/createCustomer', async function handler (request, reply) {
+    createCustomer(request.body.cID, request.body.cName, request.body.customerEmail);
+})
+
+// Delete Customer By Id
+fastify.delete("/deleteCustomerById/:id", async function handler(request, reply) {
+    deleteCustomer(request.params.id);
+  });
 
 // Run the server!
 try {
