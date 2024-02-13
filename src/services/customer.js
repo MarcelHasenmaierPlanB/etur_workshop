@@ -41,6 +41,7 @@ function deleteCustomer (input) {
     })
  }
 
+export {deleteCustomer};
 export {readCustomer};
 export {exportAllCustomer};
 export {createCustomer};
