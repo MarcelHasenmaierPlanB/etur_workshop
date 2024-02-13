@@ -38,7 +38,7 @@ fastify.get('/getAllCustomers', async function handler (request, reply) {
 })
 
 fastify.post('/createCustomer', async function handler (request, reply) {
-    createCustomer(request.body.cNr, request.body.cName, request.body.customerEmail);
+    createCustomer(request.body);
 })
 
 // Delete Customer By Id
