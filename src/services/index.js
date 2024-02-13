@@ -1,4 +1,5 @@
-import {exportAllCustomers } from "./customer.js";
+
+import { exportAllCustomer } from "./customer.js";
 import {createCustomer } from "./customer.js";
 
 
@@ -9,5 +10,4 @@ const customer3 = {
  }
 
 createCustomer (customer3);
-
-console.log(exportAllCustomers());
+console.log(exportAllCustomer);

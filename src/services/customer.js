@@ -33,11 +33,31 @@ function createCustomer(input){
     return;
 }
 
-function exportAllCustomers (){
+function exportAllCustomer (){
 console.log("-----Alle Kunden:-----");
     return arrAllCustomer;
  }
 
-export {exportAllCustomers};
+ function readCustomer (input) {
+    arrAllCustomer.forEach(element => {
+        if (input === cNr) {
+            return element;
+        }
+    });
+ }
+
+ function deleteCustomer (input) {
+    arrAllCustomer.forEach(element => {
+        if (input === cNr) {
+            cName = "deletedCustomer";
+            cNr = -1;
+            cMail = "deleted@customer.com";
+            return element;
+        }
+    })
+ }
+
+export {readCustomer};
+export {exportAllCustomer};
 export {createCustomer};
 //export {getID};
