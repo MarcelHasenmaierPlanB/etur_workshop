@@ -38,11 +38,11 @@ fastify.get('/getAllCustomers', async function handler (request, reply) {
 })
 
 fastify.post('/createCustomer', async function handler (request, reply) {
-    createCustomer(request.body.cID, request.body.cName, request.body.customerEmail);
+    createCustomer(request.body.cNr, request.body.cName, request.body.customerEmail);
 })
 
 // Delete Customer By Id
-fastify.delete("/deleteCustomerById/:id", async function handler(request, reply) {
+fastify.delete("/deleteCustomerByCNR/:id", async function handler(request, reply) {
     deleteCustomer(request.params.id);
   });
 
