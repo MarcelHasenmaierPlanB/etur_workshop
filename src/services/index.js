@@ -10,4 +10,4 @@ const customer3 = {
  }
 
 createCustomer (customer3);
-console.log(exportAllCustomer);
+console.log(exportAllCustomer());
