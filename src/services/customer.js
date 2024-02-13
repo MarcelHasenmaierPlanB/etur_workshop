@@ -1,5 +1,6 @@
 // cID is the unique ID of a customer
 let cID = 0;
+const arrAllCustomer = [];
 
 function getID () {
     return cID;
@@ -8,24 +9,6 @@ function getID () {
 function increaseID () {
     return ++cID;
 }
-
-const customer1 = {
-    cID : increaseID(),
-    cName : "ersterKunde",
-    cNr : 1001,
-    cMail : "erster@kunde.com"
- }
-
- const arrAllCustomer = [customer1];
-
- const customer2 = {
-    cID : increaseID(),
-    cName : "zweiterKunde",
-    cNr : 1002,
-    cMail : "zweiter@kunde.com"
- }
-
- arrAllCustomer.push(customer2);
 
 function createCustomer(input){
     arrAllCustomer.push(input);
