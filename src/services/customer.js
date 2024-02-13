@@ -40,4 +40,4 @@ console.log("-----Alle Kunden:-----");
 
 export {exportAllCustomers};
 export {createCustomer};
-export {getID};
+//export {getID};
