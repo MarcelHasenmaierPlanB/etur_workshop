@@ -1,4 +1,4 @@
- const customer1 = {
+const customer1 = {
     cName : "ersterKunde",
     cNr : 1001,
     cMail : "erster@kunde.com"
@@ -22,4 +22,15 @@
  console.log(arrAllCustomer.length);
  console.log("----------");
 
- 
+
+
+function createCustomer(input){
+  return arrAllCustomer.push(input);
+}
+
+function exportAllCustomers (){
+    return arrAllCustomer
+ }
+
+export{exportAllCustomers};
+export {createCustomer};

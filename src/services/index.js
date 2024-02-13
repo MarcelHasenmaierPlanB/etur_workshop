@@ -1,5 +1,13 @@
+import {exportAllCustomers } from "./customer.js";
+import {createCustomer } from "./customer.js";
 
 
+const customer3 = {
+    cName : "dritterKunde",
+    cNr : 1003,
+    cMail : "dritter@kunde.com"
+ }
 
-const message = "Hello World";
-console.log(message);
+createCustomer(customer3);
+
+console.log(exportAllCustomers);
