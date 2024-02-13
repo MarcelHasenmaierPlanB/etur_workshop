@@ -24,7 +24,3 @@ createCustomer (customer1);
 createCustomer (customer2);
 createCustomer (customer3);
 console.log(exportAllCustomer());
-
-console.log(readCustomer(1001));
-console.log(deleteCustomer(1001));
-console.log(exportAllCustomer());
