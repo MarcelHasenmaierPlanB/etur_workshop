@@ -1,6 +1,7 @@
 
 import { deleteCustomer, exportAllCustomer } from "./customer.js";
 import { createCustomer } from "./customer.js";
+import { validateID } from "./customer.js";
 
 const customer1 = {
     cName : "ersterKunde",
@@ -31,6 +32,7 @@ createCustomer (customer3);
 console.log(exportAllCustomer());
 randomDelete();
 
-deleteCustomer (randomDelete());
+//deleteCustomer (randomDelete());
 console.log(exportAllCustomer());
 
+console.log(validateID);

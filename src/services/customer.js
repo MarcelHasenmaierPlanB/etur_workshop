@@ -41,8 +41,19 @@ function deleteCustomer (input) {
     })
  }
 
+    function validateID(cNr, arrAllCustomer) {
+        // Iteriere durch das Array und überprüfe, ob die Kundennummer vorhanden ist
+        for (let i = 0; i < arrAllCustomer.length; i++) {
+          if (cNr === arrAllCustomer[i]) {
+            return true; // Kundennummer gefunden
+          }
+        }
+        return false; // Kundennummer nicht gefunden
+      }
+    
 export {deleteCustomer};
 export {readCustomer};
 export {exportAllCustomer};
 export {createCustomer};
+export {validateID}
 //export {getID};
