@@ -29,3 +29,8 @@ function exportAllReports (){
 function readReports (input) {
   return arrAllReports.find(element => element.repID === input);
 }
+
+export {createReport};
+export {exportAllReports};
+export {readReports};
+export {getRepID};
