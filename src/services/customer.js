@@ -1,56 +1,46 @@
 // cID is the unique ID of a customer
 let cID = 0;
-// repID is the unique ID of a report
-let repID = 0;
-const arrAllCustomer = [];
+const arrAllCustomers = [];
 
 function getID () {
     return cID;
-}
-
-function getRepID () {
-    return repID;
 }
 
 function increaseCID () {
     return ++cID;
 }
 
-function increaseRepID () {
-    return ++repID;
-}
-
 // add customer and add unique ID
 function createCustomer(input){
-    arrAllCustomer.push(input);
-    let lastCreatedCustomerID = arrAllCustomer[arrAllCustomer.length - 1];
+    arrAllCustomers.push(input);
+    let lastCreatedCustomerID = arrAllCustomers[arrAllCustomers.length - 1];
     lastCreatedCustomerID = {
         cID: increaseCID(),
     }
     console.log(lastCreatedCustomerID);
-    return arrAllCustomer[arrAllCustomer.length - 1];
+    return arrAllCustomers[arrAllCustomers.length - 1];
 }
 
 function exportAllCustomer (){
     console.log("-----Alle Kunden:-----");
-    return arrAllCustomer;
- }
+    return arrAllCustomers;
+}
 
 function readCustomer (input) {
-    return arrAllCustomer.find(element => element.cNr === input);
- }
+    return arrAllCustomers.find(element => element.cNr === input);
+}
 
 function deleteCustomer (input) {
     readCustomer(input).cName = "deletedCustomer";
     readCustomer(input).cMail = 'deleted@customer.com';
     readCustomer(input).cNr = -1;
-    return arrAllCustomer;
- }
+    return arrAllCustomers;
+}
 
-function validateID(cNr, arrAllCustomer) {
+function validateID(cNr, arrAllCustomers) {
     // Iteriere durch das Array und überprüfe, ob die Kundennummer vorhanden ist
-    for (let i = 0; i < arrAllCustomer.length; i++) {
-        if (cNr === arrAllCustomer[i]) {
+    for (let i = 0; i < arrAllCustomers.length; i++) {
+        if (cNr === arrAllCustomers[i]) {
         return true; // Kundennummer gefunden
         }
     }

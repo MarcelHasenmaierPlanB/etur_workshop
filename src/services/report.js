@@ -1,30 +1,38 @@
-const report = {
-    id: 0,
-    category: [],
-    customerId: "1234",
-    description: "This is a description",
-    labels: ["label1", "label2"],
-    owner: "Product Manager",
-    assignedTo: "Jens Reiner",
-    createdAt: "2020-01-01:12:00:00",
-    editedAt: "2020-01-01:12:00:00",
-    closedAt: "2020-01-01:12:00:00",
-    state: "Open",
-    priority: 1,
-    comments: [
-      {
-        author: "Jens Reiner",
-        message: "This is a comment",
-        createdAt: "2020-01-01:12:00:00",
-        type: 'developer',
-      },
-    ],
-    closeReason: "This is a close reason",
-    references: [
-      {
-        type: "github",
-        url: "",
-        issueNumber: 1
-      }
-    ]
-  };
+// repID is the unique ID of a report
+let repID = 0;
+const arrAllReports = [];
+
+function getRepID () {
+  return repID;
+}
+
+function increaseRepID () {
+  return ++repID;
+}
+
+// add customer and add unique ID
+function createReport(input){
+  arrAllCustomer.push(input);
+  let lastCreatedCustomerID = arrAllCustomer[arrAllCustomer.length - 1];
+  lastCreatedCustomerID = {
+      cID: increaseCID(),
+  }
+  console.log(lastCreatedCustomerID);
+  return arrAllCustomer[arrAllCustomer.length - 1];
+}
+
+function exportAllReports (){
+  console.log("-----Alle Kunden:-----");
+  return arrAllCustomer;
+}
+
+function readReports (input) {
+  return arrAllCustomer.find(element => element.cNr === input);
+}
+
+function deleteReports (input) {
+  readCustomer(input).cName = "deletedCustomer";
+  readCustomer(input).cMail = 'deleted@customer.com';
+  readCustomer(input).cNr = -1;
+  return arrAllCustomer;
+}
