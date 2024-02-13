@@ -6,6 +6,7 @@ const customer1 = {
 
  const arrAllCustomer = [customer1];
 
+ console.log("-----Erster Kunde-----");
  console.log(arrAllCustomer);
  console.log(arrAllCustomer.length);
  console.log("----------");
@@ -18,6 +19,7 @@ const customer1 = {
 
  arrAllCustomer.push(customer2);
 
+ console.log("-----Zweiter Kunde-----");
  console.log(arrAllCustomer);
  console.log(arrAllCustomer.length);
  console.log("----------");
@@ -29,8 +31,9 @@ function createCustomer(input){
 }
 
 function exportAllCustomers (){
+console.log("-----Alle Kunden:-----");
     return arrAllCustomer
  }
 
-export{exportAllCustomers};
+export {exportAllCustomers};
 export {createCustomer};

@@ -8,6 +8,6 @@ const customer3 = {
     cMail : "dritter@kunde.com"
  }
 
-createCustomer(customer3);
+createCustomer (customer3);
 
-console.log(exportAllCustomers);
+console.log(exportAllCustomers());
