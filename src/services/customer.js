@@ -1,6 +1,25 @@
-const customer = {
-    name: "Kundenname",
-    knr: 1000,
-    age: 1;
-    mail: "kunde@mail.com"
-}
+ const customer1 = {
+    cName : "ersterKunde",
+    cNr : 1001,
+    cMail : "erster@kunde.com"
+ }
+
+ const arrAllCustomer = [customer1];
+
+ console.log(arrAllCustomer);
+ console.log(arrAllCustomer.length);
+ console.log("----------");
+
+ const customer2 = {
+    cName : "zweiterKunde",
+    cNr : 1002,
+    cMail : "zweiter@kunde.com"
+ }
+
+ arrAllCustomer.push(customer2);
+
+ console.log(arrAllCustomer);
+ console.log(arrAllCustomer.length);
+ console.log("----------");
+
+ 
