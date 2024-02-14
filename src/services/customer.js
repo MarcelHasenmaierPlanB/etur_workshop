@@ -34,17 +34,16 @@ function deleteCustomer (input) {
     return arrAllCustomers;
 }
 
-function validateID (input) {
+// true/false if customer number was found
+/*function validateID (input) {
     return arrAllCustomers.find(element => element.cNr === input);
 }
+*/
 //------------------------------------------
-
-
-
-    
+   
 export {deleteCustomer};
 export {readCustomer};
 export {exportAllCustomer};
 export {createCustomer};
-export {validateID}
+//export {validateID}
 //export {getID};
