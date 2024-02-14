@@ -12,12 +12,9 @@ function increaseCID () {
 
 // add customer and add unique ID
 function createCustomer(input){
+    input.cID = increaseCID();
     arrAllCustomers.push(input);
-    let lastCreatedCustomerID = arrAllCustomers[arrAllCustomers.length - 1];
-    lastCreatedCustomerID = {
-        cID: increaseCID(),
-    }
-    console.log(lastCreatedCustomerID);
+    console.log(arrAllCustomers[arrAllCustomers.length - 1]);
     return arrAllCustomers[arrAllCustomers.length - 1];
 }
 

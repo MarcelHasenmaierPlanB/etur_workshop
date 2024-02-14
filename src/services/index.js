@@ -41,28 +41,31 @@ try {
 const customer1 = {
     cName : "ersterKunde",
     cNr : 1001,
-    cMail : "erster@kunde.com"
+    cMail : "erster@kunde.com",
+    cID : 0
  }
 
 const customer2 = {
     cName : "zweiterKunde",
     cNr : 1002,
-    cMail : "zweiter@kunde.com"
+    cMail : "zweiter@kunde.com",
+    cID : 0
  }
 
 const customer3 = {
     cName : "dritterKunde",
     cNr : 1003,
-    cMail : "dritter@kunde.com"
+    cMail : "dritter@kunde.com",
+    cID : 0
  }
 
 // <--- create reports ---> //
 const report1 = {
     category: "Feeback",
     customerId: 1001,
-    description: "This is a description",
+    title: "This is a description",
     labels: ["label1", "label2"],
-    owner: "Product Manager",
+    creater: "Product Manager",
     assignedTo: "Jens Reiner",
     createdAt: "2020-01-01:12:00:00",
     editedAt: "2020-01-01:12:00:00",
@@ -89,9 +92,9 @@ const report1 = {
 const report2 = {
     category: "Bug",
     customerId: 1002,
-    description: "wE haVe pRoBlEmS !!!111",
+    title: "wE haVe pRoBlEmS !!!111",
     labels: ["label1", "label2"],
-    owner: "Developer",
+    creater: "Developer",
     assignedTo: "Batman",
     createdAt: "2020-01-01:12:00:00",
     editedAt: "2020-01-01:12:00:00",
@@ -118,9 +121,9 @@ const report2 = {
 const report3 = {
     category: "Question",
     customerId: 1002,
-    description: "Spiderman sucks",
+    title: "Spiderman sucks",
     labels: ["label1", "label2"],
-    owner: "Batman",
+    creater: "Batman",
     assignedTo: "Superman",
     createdAt: "2020-01-01:12:00:00",
     editedAt: "2020-01-01:12:00:00",
@@ -147,9 +150,9 @@ const report3 = {
 const report4 = {
     category: "Feeback",
     customerId: 1002,
-    description: "Chill Bats",
+    title: "Chill Bats",
     labels: ["label1", "label2"],
-    owner: "Superman",
+    creater: "Superman",
     assignedTo: "Batman",
     createdAt: "2020-01-02:12:00:00",
     editedAt: "2020-01-02:12:00:00",
@@ -176,9 +179,9 @@ const report4 = {
 const report5 = {
     category: "Feedback",
     customerId: 1002,
-    description: "What happend this night?",
+    title: "What happend this night?",
     labels: ["label1", "label2"],
-    owner: "Superman",
+    creater: "Superman",
     assignedTo: "Spiderman",
     createdAt: "2020-01-02:12:00:00",
     editedAt: "2020-01-02:12:00:00",
@@ -213,13 +216,13 @@ createReport(report3);
 createReport(report4);
 createReport(report5);
 
-console.log("exportAllCustomer()");
+console.log("<--------------exportAllCustomer()------------------>");
 console.log(exportAllCustomer());
-console.log("exportAllReports()");
+console.log("<--------------exportAllReports()------------------>");
 console.log(exportAllReports());
-console.log("customerReportStatusCheck(1002)");
+console.log("<--------------customerReportStatusCheck(1002)------------------>");
 console.log(customerReportStatusCheck(1002));
 
-console.log(readAllReportsByCustomer(1002));
-console.log(readReports(3));
+//console.log(readAllReportsByCustomer(1002));
+//console.log(readReports(3));
 // console.log(readAllReportsByCustomer(1003));

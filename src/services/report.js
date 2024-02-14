@@ -12,12 +12,9 @@ function increaseRepID () {
 
 // add customer and add unique ID
 function createReport(input){
+  input.repID = increaseRepID();
   arrAllReports.push(input);
-  let lastCreatedReportID = arrAllReports[arrAllReports.length - 1];
-  lastCreatedReportID = {
-      id: increaseRepID(),
-  }
-  console.log(lastCreatedReportID);
+  console.log(arrAllReports[arrAllReports.length - 1]);
   return arrAllReports[arrAllReports.length - 1];
 }
 
@@ -34,8 +31,9 @@ function readReports (input) {
 //return reports by customer ID
 function readAllReportsByCustomer (input) {
   let obj = {}
+  let foundElement = arrAllReports.find(element => element.repID === input);
   for (let i = 0; i < arrAllReports.length - 1; i++) {
-    if (arrAllReports.find(element => element.repID === input))
+    if (foundElement)
     obj.push(arrAllReports.element);
   }
   return obj;
@@ -43,26 +41,25 @@ function readAllReportsByCustomer (input) {
   //return arrAllReports.find(element => element.customerId === input);
 }
 
-/*
-TODO: HÄ?? 
-// "element is not definded"
-*/
+// 
 function customerReportStatusCheck (input) {
-  for (let i = 0; i < arrAllReports.length - 1; i++) {
-    if (arrAllReports.find(element => element.customerId === input)){
-    obj = {
-      owner : element.owner,              // "element is not definded" 
-      description : element.description,  // "element is not definded"
-      state : element.state               // "element is not definded"
-    }
-    //obj.push(arrAllReports.element.owner);
-    //obj.push(arrAllReports.element.description);
-    //obj.push(arrAllReports.element.state);
+  let tempArr = [];
+  let obj = {};   // for console formatting reasons^^
+  let foundElement = {};
+  for (let i = 0; i < arrAllReports.length; i++) {
+    foundElement = arrAllReports[i].customerId
+    if (foundElement === input){
+      tempArr.push(
+        obj = {
+          creater : arrAllReports[i].creater,               
+          title : arrAllReports[i].title,              
+          state : arrAllReports[i].state
+        }
+      )
     }
   }
-  return obj;
-
-  //return arrAllReports.find(element => element.customerId === input).state;
+  //console.log(tempArr)
+;  return tempArr;
 }
 
 export {customerReportStatusCheck};
