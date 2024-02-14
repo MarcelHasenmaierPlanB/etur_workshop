@@ -73,3 +73,34 @@
     justify-content: space-between;
     margin: auto;
 }
+
+/* Login Portal */
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    #container {
+        text-align: center;
+    }
+    input[type="text"] {
+        padding: 10px;
+        margin-right: 10px;
+        width: 200px;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+
+/* Customer Portal */
+
