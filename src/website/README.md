@@ -1,3 +1,0 @@
-# README
-
-Dateien für Website

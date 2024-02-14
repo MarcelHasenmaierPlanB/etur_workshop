@@ -1,7 +1,7 @@
 import { exportAllCustomer, readCustomer, deleteCustomer } from "./customer.js";
 import { createReport, customerReportStatusCheck, exportAllReports, readAllReportsByCustomer, readReports } from "./report.js";
 import { createCustomer } from "./customer.js";
-import { validateID } from "./customer.js";
+//import { validateID } from "./customer.js";
 
 function randomDelete(){
     const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
@@ -28,6 +28,18 @@ fastify.post('/createCustomer', async function handler (request, reply) {
 fastify.delete("/deleteCustomerByCNR/:id", async function handler(request, reply) {
     deleteCustomer(request.params.id);
 });
+
+fastify.delete("/readAllReportsByCustomer/:id", async function handler(request, reply) {
+    readAllReportsByCustomer(request.params.id);
+});
+
+fastify.get("/readCustomer/:id", async function handler(request, reply) {
+    readCustomer(request.params.id);
+});
+
+
+
+
 
 // Run the server!
 try {
@@ -216,13 +228,16 @@ createReport(report3);
 createReport(report4);
 createReport(report5);
 
+//readCustomer(1002);
+
+/*
 console.log("<--------------exportAllCustomer()------------------>");
 console.log(exportAllCustomer());
 console.log("<--------------exportAllReports()------------------>");
 console.log(exportAllReports());
 console.log("<--------------customerReportStatusCheck(1002)------------------>");
 console.log(customerReportStatusCheck(1002));
-
+*/
 //console.log(readAllReportsByCustomer(1002));
 //console.log(readReports(3));
 // console.log(readAllReportsByCustomer(1003));

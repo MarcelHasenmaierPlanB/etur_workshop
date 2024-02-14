@@ -73,3 +73,52 @@
     justify-content: space-between;
     margin: auto;
 }
+
+/* Login Portal */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    text-align: center;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-container input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    border-radius: 50rem;
+    border-color: black;
+}
+
+#login-button {
+    border-radius: 50rem;
+    padding: 10px 20px;
+    background-color: grey;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#login-button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    margin-top: 10px;
+    color: red;
+}
+
+/* Customer Portal */
+

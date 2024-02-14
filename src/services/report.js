@@ -32,8 +32,7 @@ function readReports (input) {
 function readAllReportsByCustomer (input) {
   let obj = {}
   let foundElement = arrAllReports.find(element => element.repID === input);
-  for (let i = 0; i < arrAllReports.length - 1; i++) {
-    if (foundElement)
+  if (foundElement){
     obj.push(arrAllReports.element);
   }
   return obj;
