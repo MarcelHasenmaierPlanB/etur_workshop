@@ -29,6 +29,16 @@ fastify.delete("/deleteCustomerByCNR/:id", async function handler(request, reply
     deleteCustomer(request.params.id);
 });
 
+fastify.delete("/readAllReportsByCustomer/:id", async function handler(request, reply) {
+    readAllReportsByCustomer(request.params.id);
+});
+
+fastify.get("/validateID/:id", async function handler(request, reply) {
+    validateID(request.params.id);
+});
+
+
+
 // Run the server!
 try {
   await fastify.listen({ port: 3000 })
@@ -216,13 +226,18 @@ createReport(report3);
 createReport(report4);
 createReport(report5);
 
+
+validateID(1002);
+
+
+/*
 console.log("<--------------exportAllCustomer()------------------>");
 console.log(exportAllCustomer());
 console.log("<--------------exportAllReports()------------------>");
 console.log(exportAllReports());
 console.log("<--------------customerReportStatusCheck(1002)------------------>");
 console.log(customerReportStatusCheck(1002));
-
+*/
 //console.log(readAllReportsByCustomer(1002));
 //console.log(readReports(3));
 // console.log(readAllReportsByCustomer(1003));
