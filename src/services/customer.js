@@ -1,63 +1,52 @@
 // cID is the unique ID of a customer
 let cID = 0;
+const arrAllCustomers = [];
 
 function getID () {
     return cID;
 }
 
-function increaseID () {
+function increaseCID () {
     return ++cID;
 }
 
-const customer1 = {
-    cID : increaseID(),
-    cName : "ersterKunde",
-    cNr : 1001,
-    cMail : "erster@kunde.com"
- }
-
- const arrAllCustomer = [customer1];
-
- const customer2 = {
-    cID : increaseID(),
-    cName : "zweiterKunde",
-    cNr : 1002,
-    cMail : "zweiter@kunde.com"
- }
-
- arrAllCustomer.push(customer2);
-
+// add customer and add unique ID
 function createCustomer(input){
-    arrAllCustomer.push(input);
-    arrAllCustomer[arrAllCustomer.length - 1].cID = increaseID();
-    return;
+    input.cID = increaseCID();
+    arrAllCustomers.push(input);
+    console.log(arrAllCustomers[arrAllCustomers.length - 1]);
+    return arrAllCustomers[arrAllCustomers.length - 1];
 }
 
 function exportAllCustomer (){
-console.log("-----Alle Kunden:-----");
-    return arrAllCustomer;
- }
+    console.log("-----Alle Kunden:-----");
+    return arrAllCustomers;
+}
 
- function readCustomer (input) {
-    arrAllCustomer.forEach(element => {
-        if (input === cNr) {
-            return element;
+function readCustomer (input) {
+    return arrAllCustomers.find(element => element.cNr === input);
+}
+
+function deleteCustomer (input) {
+    readCustomer(input).cName = "deletedCustomer";
+    readCustomer(input).cMail = 'deleted@customer.com';
+    readCustomer(input).cNr = -1;
+    return arrAllCustomers;
+}
+
+function validateID(cNr, arrAllCustomers) {
+    // Iteriere durch das Array und überprüfe, ob die Kundennummer vorhanden ist
+    for (let i = 0; i < arrAllCustomers.length; i++) {
+        if (cNr === arrAllCustomers[i]) {
+        return true; // Kundennummer gefunden
         }
-    });
- }
-
- function deleteCustomer (input) {
-    arrAllCustomer.forEach(element => {
-        if (input === cNr) {
-            cName = "deletedCustomer";
-            cNr = -1;
-            cMail = "deleted@customer.com";
-            return element;
-        }
-    })
- }
-
+    }
+    return false; // Kundennummer nicht gefunden
+    }
+    
+export {deleteCustomer};
 export {readCustomer};
 export {exportAllCustomer};
 export {createCustomer};
+export {validateID}
 //export {getID};
