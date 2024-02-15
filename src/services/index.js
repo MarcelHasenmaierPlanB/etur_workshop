@@ -1,7 +1,7 @@
 import { exportAllCustomer, readCustomer, deleteCustomer } from "./customer.js";
 import { createReport, customerReportStatusCheck, exportAllReports, readAllReportsByCustomer, readReports } from "./report.js";
 import { createCustomer } from "./customer.js";
-import { validateID } from "./customer.js";
+//import { validateID } from "./customer.js";
 
  function randomDelete(){
 const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
@@ -33,9 +33,11 @@ fastify.delete("/readAllReportsByCustomer/:id", async function handler(request, 
     readAllReportsByCustomer(request.params.id);
 });
 
-fastify.get("/validateID/:id", async function handler(request, reply) {
-    validateID(request.params.id);
+fastify.get("/readCustomer/:id", async function handler(request, reply) {
+    readCustomer(request.params.id);
 });
+
+
 
 
 
@@ -226,9 +228,7 @@ createReport(report3);
 createReport(report4);
 createReport(report5);
 
-
-validateID(1002);
-
+//readCustomer(1002);
 
 /*
 console.log("<--------------exportAllCustomer()------------------>");
