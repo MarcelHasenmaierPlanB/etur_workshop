@@ -3,13 +3,13 @@ import { createReport, customerReportStatusCheck, exportAllReports, readAllRepor
 import { createCustomer } from "./customer.js";
 import { validateID } from "./customer.js";
 
-function randomDelete(){
-    const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
-    console.log(randomNumber);
+ function randomDelete(){
+const randomNumber = Math.floor(Math.random() * 3) + 1 + 1000;
+console.log(randomNumber);
  }
 
 // initialize the server
-import Fastify from 'fastify'
+ import Fastify from 'fastify'
 const fastify = Fastify({
   logger: true
 })
@@ -27,7 +27,7 @@ fastify.post('/createCustomer', async function handler (request, reply) {
 
 fastify.delete("/deleteCustomerByCNR/:id", async function handler(request, reply) {
     deleteCustomer(request.params.id);
-});
+  });
 
 fastify.delete("/readAllReportsByCustomer/:id", async function handler(request, reply) {
     readAllReportsByCustomer(request.params.id);
@@ -71,7 +71,7 @@ const customer3 = {
 
 // <--- create reports ---> //
 const report1 = {
-    category: "Feeback",
+        category: "Feeback",
     customerId: 1001,
     title: "This is a description",
     labels: ["label1", "label2"],
@@ -83,22 +83,22 @@ const report1 = {
     state: "Open",
     priority: 1,
     comments: [
-        {
-            author: "Jens Reiner",
-            message: "This is a comment",
-            createdAt: "2020-01-01:12:00:00",
-            type: 'developer',
-        },
+      {
+        author: "Jens Reiner",
+        message: "This is a comment",
+        createdAt: "2020-01-01:12:00:00",
+        type: 'developer',
+      },
     ],
     closeReason: "This is a close reason",
     references: [
-        {
-            type: "github",
-            url: "",
-            issueNumber: 1
-        }
+      {
+        type: "github",
+        url: "",
+        issueNumber: 1
+      }
     ]
-};
+  };
 const report2 = {
     category: "Bug",
     customerId: 1002,
